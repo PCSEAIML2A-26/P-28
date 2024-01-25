@@ -1,0 +1,24 @@
+
+
+DATABASE : TicketUp
+                |
+                |
+                |
+                 ----> Table for admin
+                |
+                |
+                 ----> Table for users
+                |
+                |
+                 ----> Table for cinemas
+                |
+                |
+                 ----> Table for booked ticket information
+                |
+                |
+                 ----> 
+                |
+                |
+
+
+Sabse phle form bana movie ki details insert karane k liye fir uske baad table show kra de 

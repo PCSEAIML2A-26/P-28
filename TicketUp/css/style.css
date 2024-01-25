@@ -1,0 +1,15 @@
+.bg-soledark {
+    background-color: #191c24 !important;
+}
+.text-solesans{ 
+   color: #a6becd !important;
+}
+.text-soleshead{ 
+   color: #a9e2ff !important;
+}
+.cityname{
+    margin: .5em;
+}
+.offcanvas{
+    --bs-offcanvas-height: 80vh!important;
+}
