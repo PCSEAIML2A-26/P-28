@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>3D Movie Seat Selector</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Seats</h1>
+    <div id="seat-map"></div>
+    <div id="seat-legend"></div>
+    <div id="selected-seats"></div>
+    <button id="checkout-btn">Checkout</button>
+  </div>
+
+  <script>const seatMap = document.getElementById('seat-map');
+    const seatLegend = document.getElementById('seat-legend');
+    const selectedSeats = document.getElementById('selected-seats');
+    const checkoutBtn = document.getElementById('checkout-btn');
+    
+    const rows = 10;
+    const seatsPerRow = 20;
+    const seats = [];
+    
+    for (let i = 0; i < rows; i++) {
+      const row = document.createElement('div');
+      row.classList.add('row');
+    
+      for (let j = 0; j < seatsPerRow; j++) {
+        const seat = document.createElement('div');
+        seat.classList.add('seat');
+        seat.dataset.seatNumber = `${i+1}${String.fromCharCode(j+65)}`;
+        
+        if (Math.random() > 0.5) {
+          seat.classList.add('unavailable');}}}
+    </script>
+</body>
+</html>
+<style>
+  .container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+#seat-map {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.seat {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  border: 1px solid #333;
+  transform-style: preserve-3d;
+}
+
+.seat.selected {
+  background-color: #f60;
+}
+
+.seat.available {
+  background-color: #ddd;
+}
+
+.seat.unavailable {
+  background-color: #bbb;
+}
+
+#seat-legend {
+  margin-top: 20px;
+}
+
+#selected-seats {
+  margin-top: 20px;
+}
+
+#checkout-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f60;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+</style>
